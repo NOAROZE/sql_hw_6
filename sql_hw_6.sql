@@ -60,9 +60,9 @@ CREATE TABLE measurements (
 
 INSERT INTO measurements (value)
 VALUES
-  (CAST(RANDOM() * 10 + 5 AS NUMERIC(5,2))),
-  (CAST(RANDOM() * 10 + 5 AS NUMERIC(5,2))),
-  (CAST(RANDOM() * 10 + 5 AS NUMERIC(5,2)));
+  (round(RANDOM() * 10 + 5::numeric, 2)),
+  (round(RANDOM() * 10 + 5::numeric, 2)),
+  (round(RANDOM() * 10 + 5::numeric, 2));
 
 
 CREATE TABLE enrollments (
